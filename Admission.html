@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 98%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #050404;
+            border-radius: 5px;
+        }
+        input[type="checkbox"],
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 20px;
+            border: none;
+            background: #333;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background: #555;
+        }
+        .picture {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .picture img {
+            max-width: 100%;
+            height: auto;
+           /* width: 200%;*/
+            border-radius: 5px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Admission Form</h1>
+
+       
+        <div class="picture">
+            <img src="https://static.vecteezy.com/system/resources/previews/016/181/835/original/admission-open-sticker-or-label-design-for-poster-and-banners-vector.jpg">
+        </div>
+
+        <form action="submit_form.html" method="post">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter full Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter Email"required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" placeholder="Enter Address" required></textarea>
+
+            <label for="gender">Gender:</label>
+            
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other" required>
+            <label for="other">Other</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+           
+
+            <label for="courses">Select Course:</label>
+            <select id="courses" name="courses" required>
+                <option value="btech">B.Tech</option>
+                <option value="bsc">B.Sc</option>
+                <option value="ba">B.A</option>
+                <option value="bcom">B.Com</option>
+            </select>
+
+            <label for="hobbies">Hobbies:</label>
+            
+            <label for="sports">Sports</label>
+            <input type="checkbox" id="sports" name="hobbies" value="sports">
+            <label for="music">Music</label>
+            <input type="checkbox" id="Music" name="hobbies" value="Music">
+            <label for="reading"> Books Reading</label>
+            <input type="checkbox" id="books reading" name="hobbies" value="books reading">
+            <div style="margin-top: 20px;">
+                <label for="profilePicture">Upload Documents:</label>
+                <input type="file" id="profilePicture" name="profilePicture" accept="image/*" required>
+            </div>
+            <div class="buttons">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+
+            
+        </form>
+    </div>
+</body>
+</html>
